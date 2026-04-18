@@ -95,18 +95,21 @@ const fileUpload = async (FileListArr: Array<any>) => {
     emits('update:modelValue', [...FileListArr]);
     // 同步上传状态======
     try {
-      // 发送请求
       const res = await fetch(props.uploadAPI, {
         method: 'POST',
         body: formData,
       });
       const result = await res.json();
+      if (!res.ok || !result) {
+        throw new Error(result?.data?.error || '上传失败');
+      }
       i.upload_result = result;
       i.upload_result._vh_filename = i.name;
       i.upload_status = 'success';
-    } catch (error) {
+    } catch (error: any) {
       i.upload_status = 'error';
-      i.upload_result = error;
+      i.upload_result = null;
+      toast({ title: '上传失败', description: error?.message || `${i.name} 上传失败` });
     } finally {
       // 同步上传状态======
       i.upload_progress = 100;
