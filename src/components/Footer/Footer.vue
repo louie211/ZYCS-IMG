@@ -24,14 +24,8 @@
       </section>
       <section class="flex flex-col items-center gap-2">
         <div class="flex gap-6">
-          <a title="打赏站长" target="_blank" href="/reward.webp">
-            <img class="w-8" src="@/assets/images/footer/shang.svg" />
-          </a>
-          <a title="GitHub" target="_blank" rel="nofollow" href="https://github.com/louie211/ZYCS-IMG">
-            <img class="w-8" src="@/assets/images/footer/github.svg" />
-          </a>
-          <a title="邦国崛起" target="_blank" href="https://bgjq.top">
-            <img class="w-8" src="@/assets/images/footer/blog.svg" />
+          <a title="打赏站长" target="_blank" href="/赞赏码.webp">
+            <img class="w-8" src="/赞赏码.webp" />
           </a>
         </div>
         <span class="w-full font-bold text-lg text-center">邦国崛起图床</span>
