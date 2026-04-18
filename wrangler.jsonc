@@ -1,11 +1,5 @@
 {
   "name": "bgjqimg",
   "compatibility_date": "2025-04-09",
-  "assets": {
-    "directory": "./dist"
-  },
-  "pages_build_output_dir": "./dist",
-  "functions": {
-    "directory": "./functions"
-  }
+  "pages_build_output_dir": "dist"
 }
