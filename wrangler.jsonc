@@ -1,5 +1,8 @@
 {
   "name": "bgjqimg",
   "compatibility_date": "2025-04-09",
-  "pages_build_output_dir": "dist"
+  "pages_build_output_dir": "dist",
+  "_metadata": {
+    "next_migration": "pages_and_worker_compatibility_date"
+  }
 }
