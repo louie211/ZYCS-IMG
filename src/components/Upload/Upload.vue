@@ -95,11 +95,8 @@ const fileUpload = async (FileListArr: Array<any>) => {
     emits('update:modelValue', [...FileListArr]);
     // 同步上传状态======
     try {
-      const res = await fetch('https://api.imgur.com/3/image', {
+      const res = await fetch(props.uploadAPI, {
         method: 'POST',
-        headers: {
-          Authorization: 'Client-ID 546c25a59c58ad7'
-        },
         body: formData,
       });
       const result = await res.json();
